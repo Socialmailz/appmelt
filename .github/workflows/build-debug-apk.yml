@@ -34,11 +34,16 @@ jobs:
 
       - name: Prepare Secrets and Environment
         run: |
-          if [ ! -f ".env" ] && [ -f ".env.example" ]; then
-            cp .env.example .env
+          if [ ! -f ".env" ]; then
+            if [ -f ".env.example" ]; then
+              cp .env.example .env
+            else
+              echo "GEMINI_API_KEY=" > .env
+            fi
           fi
           touch secrets.defaults.properties
           echo "GEMINI_API_KEY=" >> secrets.defaults.properties
+          echo "GEMINI_API_KEY=" >> .env
 
       - name: Restore or Generate debug.keystore
         run: |

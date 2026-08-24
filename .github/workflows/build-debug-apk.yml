@@ -32,6 +32,14 @@ jobs:
             chmod +x gradlew
           fi
 
+      - name: Prepare Secrets and Environment
+        run: |
+          if [ ! -f ".env" ] && [ -f ".env.example" ]; then
+            cp .env.example .env
+          fi
+          touch secrets.defaults.properties
+          echo "GEMINI_API_KEY=" >> secrets.defaults.properties
+
       - name: Restore or Generate debug.keystore
         run: |
           if [ -f "debug.keystore.base64" ]; then

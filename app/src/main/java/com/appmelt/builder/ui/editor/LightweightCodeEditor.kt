@@ -19,13 +19,13 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Redo
+import androidx.compose.material.icons.automirrored.filled.Undo
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FindReplace
-import androidx.compose.material.icons.filled.Redo
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Undo
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -142,7 +142,7 @@ fun LightweightEditorScreen(
                         onClick = onBack,
                         modifier = Modifier.testTag("editor_back_button")
                     ) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 },
                 actions = {
@@ -152,7 +152,7 @@ fun LightweightEditorScreen(
                         modifier = Modifier.testTag("editor_undo_button")
                     ) {
                         Icon(
-                            Icons.Default.Undo,
+                            Icons.AutoMirrored.Filled.Undo,
                             contentDescription = "Undo",
                             tint = if (undoStack.isNotEmpty()) MaterialTheme.colorScheme.primary else Color.Gray
                         )
@@ -163,7 +163,7 @@ fun LightweightEditorScreen(
                         modifier = Modifier.testTag("editor_redo_button")
                     ) {
                         Icon(
-                            Icons.Default.Redo,
+                            Icons.AutoMirrored.Filled.Redo,
                             contentDescription = "Redo",
                             tint = if (redoStack.isNotEmpty()) MaterialTheme.colorScheme.primary else Color.Gray
                         )

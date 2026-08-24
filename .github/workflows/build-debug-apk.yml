@@ -30,8 +30,6 @@ jobs:
         run: |
           if [ -f "./gradlew" ]; then
             chmod +x gradlew
-          else
-            echo "gradlew not found, will use gradle"
           fi
 
       - name: Restore or Generate debug.keystore
@@ -45,11 +43,14 @@ jobs:
           fi
 
       - name: Build Debug APK with Gradle
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx4g -Dfile.encoding=UTF-8 -Djava.awt.headless=true"
+          JAVA_TOOL_OPTIONS: "-Djava.awt.headless=true"
         run: |
           if [ -f "./gradlew" ]; then
-            ./gradlew assembleDebug --stacktrace
+            ./gradlew assembleDebug --no-daemon --stacktrace
           else
-            gradle assembleDebug --stacktrace
+            gradle assembleDebug --no-daemon --stacktrace
           fi
 
       - name: Upload Debug APK Artifact

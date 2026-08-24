@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Center Build Crucible / Anvil & Hammer -->
+    <!-- Glow / Base -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M38,36 L70,36 L76,46 L32,46 Z" />
+    <path
+        android:fillColor="#00B4D8"
+        android:pathData="M32,46 L76,46 L68,68 L40,68 Z" />
+    <!-- Hammer / Builder Wrench -->
+    <path
+        android:fillColor="#FFB703"
+        android:pathData="M50,26 L58,26 L58,36 L50,36 Z" />
+    <path
+        android:fillColor="#FFD166"
+        android:pathData="M44,22 L64,22 L64,26 L44,26 Z" />
+    <!-- Molten Drop / Flow -->
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M54,68 C51,68 49,71 49,74 C49,77.5 54,84 54,84 C54,84 59,77.5 59,74 C59,71 57,68 54,68 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M46,50 L62,50 L60,56 L48,56 Z" />
+</vector>

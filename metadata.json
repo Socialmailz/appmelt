@@ -1,0 +1,6 @@
+{
+  "name": "AppMelt",
+  "description": "Lightweight mobile Android project builder. Import projects from ZIP or storage, manage build runtimes on-demand, and build APKs/AABs directly on your phone without a terminal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
